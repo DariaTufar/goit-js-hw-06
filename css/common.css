@@ -11,6 +11,7 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+   
 }
 
 input {
@@ -21,4 +22,13 @@ input {
 button {
   padding: 8px 12px;
   cursor: pointer;
+}
+
+.foto__example {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  margin: auto;
+  margin-bottom: 20px;
 }

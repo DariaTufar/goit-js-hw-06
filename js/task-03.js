@@ -12,3 +12,24 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+// Use an array of objects images to create <img> elements nested in <li>. Use template strings and the insertAdjacentHTML() method to create markup.
+
+// All gallery items must be added to DOM in one insert operation.
+// Add at least some gallery design with flexboxes or grids using CSS classes.
+
+let listOfImages =` `
+images.forEach(function (element) {
+ 
+  listOfImages +=` <img class = "foto__example" 
+  src= ${element.url} 
+   alt = ${element.alt}
+   width = "300";
+   height ="300" >`
+
+return listOfImages
+})
+ 
+const ulGallery= document.querySelector(`.gallery`)
+ulGallery.insertAdjacentHTML(`afterbegin`, listOfImages)
+ 
