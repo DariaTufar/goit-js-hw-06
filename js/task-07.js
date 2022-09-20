@@ -9,6 +9,5 @@ refs.input.addEventListener( `input`, (event) => {
     text.style.fontSize = refs.input.value + `px`
 })
 
-console.log(refs.input)
 
 
