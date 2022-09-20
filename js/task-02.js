@@ -9,14 +9,14 @@ const ingredients = [
 
 const listOfIngredients= document.getElementById(`ingredients`);
 
-ingredients.forEach ( function (element) {
-  const li = document.createElement( `li`);
-  li.textContent = element;
-  li.classList.add(`item`)
-  console.log(li)
-  listOfIngredients.append(li)
-  
+const listEl =ingredients.map ((ingredient) => {
+  const itemEl = document.createElement( `li`);
+  itemEl.textContent = ingredient;
+  itemEl.classList.add(`item`);
+
+  return itemEl;
 })
 
+listOfIngredients.append(...listEl);
 
 
