@@ -15,29 +15,28 @@
 // Category: Technologies
 // Elements: 5
 
- 
 // 1. access ul  by id=`categories`
 // const ulCategories = document.getElementById("categories");
 // console.dir(ulCategories)
 //
 //  2.a count children of this first ul?
-const numberOfCategories = document.querySelector(`ul`).children.length
-console.log(`Number of categories: `, numberOfCategories)
+// const numberOfCategories = document.querySelector(`ul`).children.length
+// console.log(`Number of categories: `, numberOfCategories)
 //  2.b or  second option -  with querySelectorAll with css selector  li.item
-const liItems = document.querySelectorAll(`li.item`)
-const liItemLength=liItems.length
-console.log(`number of categories `, liItemLength)
+// const liItems = document.querySelectorAll(`li.item`)
+// const liItemLength = liItems.length
 
-// 3.a Access name of li item  first child (h2),
-// 3.b its next sibling (ul), 
-// 3.c and children of ul
+// console.log(`Number of categories `, liItemLength)
 
-    document.querySelectorAll(` li.item `).forEach(function (element) {
-        const elementHeader=element.firstElementChild;
-        const  nameOfCategory =elementHeader.textContent;
-         console.log (`Category: ${nameOfCategory}`);
+console.log(
+  `Number of categories `,
+  document.querySelectorAll(`li.item`).length
+);
 
-        const listOfElements = elementHeader.nextElementSibling;
-        const numberOfElements = [...listOfElements.children].length;
-        console.dir(` Elements: ${numberOfElements}`);
-    } )
+document.querySelectorAll(` li.item `).forEach(function (element) {
+  console.log(`Category: `, element.firstElementChild.textContent);
+  console.log(
+    `Elements: `,
+    [...element.firstElementChild.nextElementSibling.children].length
+  );
+});
