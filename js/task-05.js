@@ -5,12 +5,13 @@ const refs = {
   output: document.getElementById(`name-output`),
 };
 
-refs.input.addEventListener(`input`, handlerInput);
+// option 1
 
-function handlerInput(event) {
-  if (event.currentTarget.value === ``) {
-    refs.output.textContent = `Anonymous`;
-  } else {
-    refs.output.textContent = event.currentTarget.value;
-  }
-}
+refs.input.addEventListener(`input`, (event) => {
+  // option 1
+  // refs.output.textContent = event.currentTarget.value.trim()
+  //   ? event.currentTarget.value.trim() : `Anonymous`;
+
+  // option 2
+  refs.output.textContent = event.currentTarget.value.trim() || `Anonymous`;
+});

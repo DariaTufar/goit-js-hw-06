@@ -28,12 +28,10 @@
 
 // console.log(`Number of categories `, liItemLength)
 
-console.log(
-  `Number of categories `,
-  document.querySelectorAll(`li.item`).length
-);
+const liItem = document.querySelectorAll(`li.item`);
+console.log(`Number of categories `, liItem.length);
 
-document.querySelectorAll(` li.item `).forEach(function (element) {
+liItem.forEach(function (element) {
   console.log(`Category: `, element.firstElementChild.textContent);
   console.log(
     `Elements: `,

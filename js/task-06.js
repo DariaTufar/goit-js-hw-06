@@ -7,15 +7,14 @@
 const input = document.querySelector(`#validation-input`);
 console.log(input);
 
-input.addEventListener(`blur`, onBlur);
+input.addEventListener(`blur`, outBlur);
 
-function onBlur(event) {
-  // console.log(event.currentTarget.value.length)
-  // console.log(input.dataset.length)
-
-  if (event.currentTarget.value.length === input.dataset.length) {
-    input.classList.add(".valid");
+function outBlur() {
+  if (input.value.length === Number(input.dataset.length)) {
+    input.classList.remove("invalid");
+    return input.classList.add("valid");
   } else {
-    input.classList.add(".invalid");
+    input.classList.remove("valid");
+    return input.classList.add("invalid");
   }
 }
