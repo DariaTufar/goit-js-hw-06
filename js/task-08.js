@@ -10,13 +10,12 @@ form.addEventListener(`submit`, onSubmit);
 
 function onSubmit(evt) {
   evt.preventDefault();
+
   const { email, password } = evt.currentTarget.elements;
 
   if (email.value.trim() === `` || password.value.trim() === ``) {
-    alert`oops.. all fields must be filled in. Please, fill them all`;
+    return alert`oops.. all fields must be filled in. Please, fill them all`;
   } else {
-    const { email, password } = evt.currentTarget.elements;
-
     const dataForm = {
       email: email.value,
       password: password.value,

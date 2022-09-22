@@ -13,7 +13,8 @@ const refs = {
 refs.btnChangeColor.addEventListener(`click`, onClickChangeColor);
 
 function onClickChangeColor() {
-  refs.body.style.backgroundColor = getRandomHexColor();
-  const nameColor = refs.body.style.backgroundColor;
-  refs.spanColor.replaceChildren(nameColor);
+  const currentColor = getRandomHexColor();
+  refs.body.style.backgroundColor = currentColor;
+  console.log(currentColor);
+  refs.spanColor.replaceChildren(currentColor);
 }
