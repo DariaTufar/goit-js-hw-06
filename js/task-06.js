@@ -12,9 +12,11 @@ input.addEventListener(`blur`, outBlur);
 function outBlur() {
   if (input.value.length === Number(input.dataset.length)) {
     input.classList.remove("invalid");
-    return input.classList.add("valid");
+    input.classList.add("valid");
+    return;
   } else {
     input.classList.remove("valid");
-    return input.classList.add("invalid");
+    input.classList.add("invalid");
+    return;
   }
 }

@@ -14,7 +14,8 @@ function onSubmit(evt) {
   const { email, password } = evt.currentTarget.elements;
 
   if (email.value.trim() === `` || password.value.trim() === ``) {
-    return alert`oops.. all fields must be filled in. Please, fill them all`;
+    alert`oops.. all fields must be filled in. Please, fill them all`;
+    return;
   } else {
     const dataForm = {
       email: email.value,
